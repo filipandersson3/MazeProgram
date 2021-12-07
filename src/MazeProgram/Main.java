@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
         BufferedImage mazeImg = null;
-        File mazeFile = new File("img/testmaze.png");
+        File mazeFile = new File("img/testmaze.bmp");
         try {
             mazeImg = ImageIO.read(mazeFile);
         } catch (IOException e) {
@@ -21,10 +21,19 @@ public class Main {
         }
         int width = mazeImg.getWidth();
         int height = mazeImg.getHeight();
+        System.out.println(mazeImg.getRGB(0,29));
         boolean visited;
         boolean visitedTwice;
-        byte[] pixels = ((DataBufferByte) mazeImg.getRaster().getDataBuffer()).getData();
-        Solver solver = new Solver(29,0,pixels,width,height);
+        byte[] pixels = new byte[width*height];        //((DataBufferByte) mazeImg.getRaster().getDataBuffer()).getData();
+        System.out.println(pixels.length);
+        for (int j = 0; j < width*height; j++) {
+            if (mazeImg.getRGB(j%width,j/width) == -1) {
+                pixels[j] = -1;
+            } else if (mazeImg.getRGB(j%width,j/width) == -16777216) {
+                pixels[j] = 0;
+            }
+        }
+        Solver solver = new Solver(30,0,pixels,width,height);
 
         for (int i = 0; i < width*height; i++) {
             visited = false;

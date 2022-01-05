@@ -33,7 +33,7 @@ public class Main {
                 pixels[j] = 0;
             }
         }
-        Solver solver = new Solver(30,0,pixels,width,height);
+        BFSSolver solver = new BFSSolver(29,0,pixels,width,height);
 
         for (int i = 0; i < width*height; i++) {
             visited = false;
@@ -49,9 +49,9 @@ public class Main {
                 }
             }
             if (visitedTwice) {
-                System.out.print("B)");
+                System.out.print("▓▓");
             } else if (visited) {
-                System.out.print(":D");
+                System.out.print("░░");
             } else {
                 if (pixels[i] == -1) {
                     System.out.print("  ");

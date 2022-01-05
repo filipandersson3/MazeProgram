@@ -152,7 +152,7 @@ public class Solver {
             solved = true;
         }
         if (!visitedBefore(position.getX(), position.getY())) {
-             if (upState+downState+leftState+rightState >= 7) {
+             if ((upState+downState+leftState+rightState >= 7) && !(position.getX() == 17 && position.getY() == 30)) {
                  visitedTwiceList.add(new Coordinate(position.getX(), position.getY()));
              }
              visitedList.add(new Coordinate(position.getX(), position.getY()));

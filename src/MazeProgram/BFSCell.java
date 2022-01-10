@@ -30,6 +30,7 @@ public class BFSCell {
 
     public void update(List<Coordinate> totalVisitedList) {
         visitedList.add(new Coordinate(position.getX(), position.getY()));
+        totalVisitedList.add(new Coordinate(position.getX(), position.getY()));
 
         checkNeighbours(totalVisitedList);
 
@@ -108,16 +109,18 @@ public class BFSCell {
         position.setX(position.getX()+x);
         position.setY(position.getY()+y);
     }
-    public boolean isDeadEnd() {
+    public boolean isDeadEnd(List<Coordinate> totalVisitedList) {
         if (!(upState==0||downState==0||rightState==0||leftState==0)) {
             visitedList.add(new Coordinate(position.getX(), position.getY()));
+            totalVisitedList.add(new Coordinate(position.getX(), position.getY()));
             return true;
         }
         return false;
     }
-    public boolean foundSolution() {
+    public boolean foundSolution(List<Coordinate> totalVisitedList) {
         if (position.getX() == end.getX() && position.getY() == end.getY()) {
             visitedList.add(new Coordinate(position.getX(), position.getY()));
+            totalVisitedList.add(new Coordinate(position.getX(), position.getY()));
             return true;
         }
         return false;

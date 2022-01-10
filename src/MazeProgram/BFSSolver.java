@@ -24,17 +24,11 @@ public class BFSSolver {
             for (BFSCell c:BFSCells) {
                 c.update(visitedList);
 
-                //lägger till cellernas individuella visitedLists till sammanlagda
-                for (Coordinate b:c.getVisitedList()) {
-                    if (!visitedList.contains(b)) {
-                        visitedList.add(b);
-                    }
-                }
-                if (c.foundSolution()) {
+                if (c.foundSolution(visitedList)) {
                     visitedTwiceList = c.getVisitedList(); //den väg som cellen färdats från start sparas i
                     solved = true;                         //visitedTwiceList för att färgen ska ändras
                 }
-                if (c.isDeadEnd()) {
+                if (c.isDeadEnd(visitedList)) {
                     BFSCellTrash.add(c);
                 }
                 //tar createCellList från varje cell, skapar de cellerna och tar bort den cellen som skapar

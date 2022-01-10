@@ -13,6 +13,18 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
+        try {
+            args[0] = args[0];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("enter either dfs or dfs as the first argument");
+            System.exit(1);
+        }
+        try {
+            args[1] = args[1];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("enter file name as second argument");
+            System.exit(1);
+        }
         BufferedImage mazeImg = null;
         File mazeFile = new File("img/" + args[1] + ".bmp");
         try {

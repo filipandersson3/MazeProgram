@@ -13,21 +13,48 @@ public class BFSCell {
     private int downState;
     private int leftState;
     private int rightState;
-    // 0 means empty and not visited,
-    // 1 visited once,
-    // 2 visited more than once or not empty
+    // 0 betyder passerbar och inte besökt,
+    // 1 besökt en gång,
+    // 2 besökt mer än en gång eller inte passerbar
     private List<Coordinate> createCellList = new ArrayList<Coordinate>();
+    private Coordinate end;
 
-    public BFSCell(int x, int y, int width, int height, byte[] pixels) {
+    public BFSCell(int x, int y, int width, int height, byte[] pixels, List<Coordinate> lastVisited, Coordinate end) {
         position = new Coordinate(x,y);
         this.width = width;
         this.height = height;
         this.pixels = pixels;
+        this.end = end;
+        visitedList.addAll(lastVisited);
     }
 
     public void update(List<Coordinate> totalVisitedList) {
-        //System.out.println(position.getX() + " " + position.getY());
+        visitedList.add(new Coordinate(position.getX(), position.getY()));
 
+        checkNeighbours(totalVisitedList);
+
+        //ser om mer än en väg är möjlig, annars flytta till en möjlig väg om det finns
+        if ((upState + downState == 0
+                || upState + rightState == 0
+                || upState + leftState == 0
+                || downState + rightState == 0
+                || downState + leftState == 0)
+                || rightState + leftState == 0) {
+            junctionCreate();
+        } else {
+            if (upState == 0) {
+                move(0, -1);
+            } else if (downState == 0) {
+                move(0, 1);
+            } else if (leftState == 0) {
+                move(-1, 0);
+            } else if (rightState == 0) {
+                move(1, 0);
+            }
+        }
+    }
+
+    private void checkNeighbours(List<Coordinate> totalVisitedList) {
         try {
             downState = visited(position.getX(),position.getY()+1, totalVisitedList);
         } catch (ArrayIndexOutOfBoundsException ignored) {downState = 2;}
@@ -40,41 +67,10 @@ public class BFSCell {
         try {
             leftState = visited(position.getX()-1, position.getY(), totalVisitedList);
         } catch (ArrayIndexOutOfBoundsException ignored) {leftState = 2;}
-
-        //System.out.println(downState + " u" + upState + " l" + leftState + " r" + rightState);
-        if (upState+downState == 0) {  //poopa code
-            junctionCreate();
-        } else if (upState+rightState == 0) {
-            junctionCreate();
-        } else if (upState+leftState == 0) {
-            junctionCreate();
-        } else if (downState+rightState == 0) {
-            junctionCreate();
-        } else if (downState+leftState == 0) {
-            junctionCreate();
-        } else if (rightState+leftState == 0) {
-            junctionCreate();
-        } else if (upState == 0 || downState == 0 || leftState == 0 || rightState == 0) {
-            if (upState == 0) {
-                move(0,-1);
-                //System.out.println("going up...");
-            }
-            else if (downState == 0) {
-                move(0,1);
-                //System.out.println("going down...");
-            }
-            else if (leftState == 0) {
-                move(-1,0);
-                //System.out.println("going left...");
-            }
-            else {
-                move(1,0);
-                //System.out.println("going right...");
-            }
-        }
     }
 
     private void junctionCreate() {
+        //lägger till celler som ska skapas i en lista som BFSSolver använder
         createCellList.clear();
         if (upState == 0) {
             createCellList.add(new Coordinate(position.getX(), position.getY()-1));
@@ -88,7 +84,6 @@ public class BFSCell {
         if (leftState == 0) {
             createCellList.add(new Coordinate(position.getX()-1, position.getY()));
         }
-        visitedList.addAll(createCellList);
     }
 
     private int visited(int x, int y, List<Coordinate> totalVisitedList) {
@@ -99,7 +94,7 @@ public class BFSCell {
         } else {
             return 2;
         }
-        return 0;
+        return 0; // <-- används inte men måste finnas
     }
     private boolean visitedBefore(int x, int y, List<Coordinate> totalVisitedList) {
         for (Coordinate c:totalVisitedList) {
@@ -110,20 +105,19 @@ public class BFSCell {
         return false;
     }
     public void move(int x, int y) {
-        visitedList.add(new Coordinate(position.getX(), position.getY()));
         position.setX(position.getX()+x);
         position.setY(position.getY()+y);
     }
     public boolean isDeadEnd() {
-        if (upState+downState+leftState+rightState >= 7) {
+        if (!(upState==0||downState==0||rightState==0||leftState==0)) {
             visitedList.add(new Coordinate(position.getX(), position.getY()));
             return true;
         }
         return false;
     }
     public boolean foundSolution() {
-        if (position.getX() == 17 && position.getY() == 30) {
-            visitedList.add(new Coordinate(17,30));
+        if (position.getX() == end.getX() && position.getY() == end.getY()) {
+            visitedList.add(new Coordinate(position.getX(), position.getY()));
             return true;
         }
         return false;
@@ -135,5 +129,17 @@ public class BFSCell {
 
     public List<Coordinate> getCreateCellList() {
         return createCellList;
+    }
+
+    public int getX() {
+        return position.getX();
+    }
+
+    public int getY() {
+        return position.getY();
+    }
+
+    public Coordinate getPosition() {
+        return position;
     }
 }

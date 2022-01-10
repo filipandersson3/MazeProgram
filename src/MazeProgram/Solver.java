@@ -15,72 +15,75 @@ public class Solver {
     private int downState;
     private int leftState;
     private int rightState;
-    // 0 means empty and not visited,
-    // 1 visited once,
-    // 2 visited more than once or not empty
-    private long startTime = System.nanoTime();
+    // 0 betyder passerbar och inte besökt,
+    // 1 besökt en gång,
+    // 2 besökt mer än en gång eller inte passerbar
+    private int[] stateList = new int[5];
+    int r = ((int)(Math.random()*4));
+    private Coordinate end;
+    private long startTime;
     private boolean solved = false;
 
-    public Solver(int x, int y, byte[] pixels, int width, int height) {
-        position = new Coordinate(x,y);
+    public Solver(byte[] pixels, int width, int height, Coordinate start, Coordinate end) {
+        position = new Coordinate(start.getX(), start.getY());
         this.pixels = pixels;
         this.width = width;
         this.height = height;
-        System.out.println(pixels[2]);
+        this.end = end;
+
+        startTime = System.nanoTime();
+
         while (!solved) {
-            System.out.println(position.getX() + " " + position.getY());
 
-            try {
-                downState = visited(position.getX(),position.getY()+1);
-            } catch (ArrayIndexOutOfBoundsException ignored) {downState = 2;}
-            try {
-                upState = visited(position.getX(), position.getY()-1);
-            } catch (ArrayIndexOutOfBoundsException ignored) {upState = 2;}
-            try {
-                rightState = visited(position.getX()+1, position.getY());
-            } catch (ArrayIndexOutOfBoundsException ignored) {rightState = 2;}
-            try {
-                leftState = visited(position.getX()-1, position.getY());
-            } catch (ArrayIndexOutOfBoundsException ignored) {leftState = 2;}
+            checkNeighbours();
 
-            System.out.println(downState + " u" + upState + " l" + leftState + " r" + rightState);
-            System.out.println(visitedTwiceList.toString());
+            //finns det passerbar och inte besökt ruta, gå dit
             if (upState == 0 || downState == 0 || leftState == 0 || rightState == 0) {
-                if (upState == 0) {
-                    move(0,-1);
-                    System.out.println("going up...");
+                stateList[0] = upState;
+                stateList[1] = downState;
+                stateList[2] = leftState;
+                stateList[3] = rightState;
+                stateList[4] = rightState;
+                while (stateList[r] != 0) {
+                    r = ((int)(Math.random()*4));
                 }
-                else if (downState == 0) {
-                    move(0,1);
-                    System.out.println("going down...");
-                }
-                else if (leftState == 0) {
-                    move(-1,0);
-                    System.out.println("going left...");
-                }
-                else {
-                    move(1,0);
-                    System.out.println("going right...");
-                }
+                if (r == 0) {move(0,-1);}
+                else if (r == 1) {move(0,1);}
+                else if (r == 2) {move(-1,0);}
+                else if (r == 3 || r == 4) {move(1,0);}
+
+                //annars gå till passerbara och besökta rutor, "backtracking" till det finns en annan väg
             } else if (upState == 1 || downState == 1 || leftState == 1 || rightState == 1) {
                 if (upState == 1) {
                     move(0,-1);
-                    System.out.println("going up...");
                 }
                 else if (downState == 1) {
                     move(0,1);
-                    System.out.println("going down...");
                 }
                 else if (leftState == 1) {
                     move(-1,0);
-                    System.out.println("going left...");
                 }
                 else {
                     move(1,0);
-                    System.out.println("going right...");
                 }
             }
         }
+    }
+
+    private void checkNeighbours() {
+        //try catch för att det inte går att röra sig utanför bilden
+        try {
+            downState = visited(position.getX(),position.getY()+1);
+        } catch (ArrayIndexOutOfBoundsException ignored) {downState = 2;}
+        try {
+            upState = visited(position.getX(), position.getY()-1);
+        } catch (ArrayIndexOutOfBoundsException ignored) {upState = 2;}
+        try {
+            rightState = visited(position.getX()+1, position.getY());
+        } catch (ArrayIndexOutOfBoundsException ignored) {rightState = 2;}
+        try {
+            leftState = visited(position.getX()-1, position.getY());
+        } catch (ArrayIndexOutOfBoundsException ignored) {leftState = 2;}
     }
 
     private int visited(int x, int y) {
@@ -145,14 +148,14 @@ public class Solver {
     }
 
     public void move(int x, int y) {
-        if (position.getX() == 17 && position.getY() == 30) {
+        if (position.getX() == end.getX() && position.getY() == end.getY()) {
             long time = System.nanoTime() - startTime;
-            System.out.println("hello");
-            System.out.println(time/1000000000f);
+            System.out.println("solved in " + (time/1000000000f) + " seconds");
             solved = true;
         }
         if (!visitedBefore(position.getX(), position.getY())) {
-             if ((upState+downState+leftState+rightState >= 7) && !(position.getX() == 17 && position.getY() == 30)) {
+            //ser om det är en återvändsgränd, lägger då till i visitedTwiceList
+             if ((upState+downState+leftState+rightState >= 7) && !(position.getX() == end.getX() && position.getY() == end.getY())) {
                  visitedTwiceList.add(new Coordinate(position.getX(), position.getY()));
              }
              visitedList.add(new Coordinate(position.getX(), position.getY()));

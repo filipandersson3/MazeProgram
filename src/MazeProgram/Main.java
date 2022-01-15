@@ -2,9 +2,7 @@ package MazeProgram;
 
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferByte;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,13 +14,19 @@ public class Main {
         try {
             args[0] = args[0];
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("enter either dfs or dfs as the first argument");
+            System.out.println("enter either dfs or bfs as the first argument");
             System.exit(1);
         }
         try {
             args[1] = args[1];
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("enter file name as second argument");
+            System.exit(1);
+        }
+        try {
+            args[2] = args[2];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("enter true or false as third argument");
             System.exit(1);
         }
         BufferedImage mazeImg = null;

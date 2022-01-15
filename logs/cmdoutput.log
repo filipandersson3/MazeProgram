@@ -1,0 +1,299 @@
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim33/gc.log MazeProgram.Main dfs prim33_1 false
+solved in 0.0016631 seconds
+checked 127 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim33/gc.log MazeProgram.Main dfs prim33_2 false
+solved in 0.0060603 seconds
+checked 305 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim33/gc.log MazeProgram.Main dfs prim33_3 false
+solved in 0.0015989 seconds
+checked 95 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim65/gc.log MazeProgram.Main dfs prim65_1 false
+solved in 0.0295734 seconds
+checked 1491 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim65/gc.log MazeProgram.Main dfs prim65_2 false
+solved in 0.022672 seconds
+checked 1031 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim65/gc.log MazeProgram.Main dfs prim65_3 false
+solved in 0.029864 seconds
+checked 1547 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim129/gc.log MazeProgram.Main dfs prim129_1 false
+solved in 0.0465656 seconds
+checked 2755 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim129/gc.log MazeProgram.Main dfs prim129_2 false
+solved in 0.0965982 seconds
+checked 4141 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim129/gc.log MazeProgram.Main dfs prim129_3 false
+solved in 0.17249009 seconds
+checked 5607 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim193/gc.log MazeProgram.Main dfs prim193_1 false
+solved in 0.5875033 seconds
+checked 10599 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim193/gc.log MazeProgram.Main dfs prim193_2 false
+solved in 0.1185422 seconds
+checked 4739 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim193/gc.log MazeProgram.Main dfs prim193_3 false
+solved in 0.1300555 seconds
+checked 5017 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim257/gc.log MazeProgram.Main dfs prim257_1 false
+solved in 2.3662245 seconds
+checked 21403 pixels
+Number of vertices: 32769 Number of edges: 32768
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim257/gc.log MazeProgram.Main dfs prim257_2 false
+solved in 0.8364864 seconds
+checked 12689 pixels
+Number of vertices: 32769 Number of edges: 32768
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/prim257/gc.log MazeProgram.Main dfs prim257_3 false
+solved in 1.195637 seconds
+checked 14805 pixels
+Number of vertices: 32769 Number of edges: 32768
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback33/gc.log MazeProgram.Main dfs recback33_1 false
+solved in 0.0095122 seconds
+checked 419 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback33/gc.log MazeProgram.Main dfs recback33_2 false
+solved in 0.0075359 seconds
+checked 383 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback33/gc.log MazeProgram.Main dfs recback33_3 false
+solved in 0.0057029 seconds
+checked 341 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback65/gc.log MazeProgram.Main dfs recback65_1 false
+solved in 0.020707 seconds
+checked 1369 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback65/gc.log MazeProgram.Main dfs recback65_2 false
+solved in 0.0106432 seconds
+checked 657 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback65/gc.log MazeProgram.Main dfs recback65_3 false
+solved in 0.0127891 seconds
+checked 839 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback129/gc.log MazeProgram.Main dfs recback129_1 false
+solved in 0.0454797 seconds
+checked 3425 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback129/gc.log MazeProgram.Main dfs recback129_2 false
+solved in 0.0736398 seconds
+checked 4027 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback129/gc.log MazeProgram.Main dfs recback129_3 false
+solved in 0.11938769 seconds
+checked 5393 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback193/gc.log MazeProgram.Main dfs recback193_1 false
+solved in 0.261824 seconds
+checked 8129 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback193/gc.log MazeProgram.Main dfs recback193_2 false
+solved in 0.4279258 seconds
+checked 11491 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback193/gc.log MazeProgram.Main dfs recback193_3 false
+solved in 1.0550827 seconds
+checked 16017 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback257/gc.log MazeProgram.Main dfs recback257_1 false
+solved in 4.032146 seconds
+checked 31283 pixels
+Number of vertices: 32769 Number of edges: 32768
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback257/gc.log MazeProgram.Main dfs recback257_2 false
+solved in 0.8872156 seconds
+checked 16583 pixels
+Number of vertices: 32769 Number of edges: 32768
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=dfs/recback257/gc.log MazeProgram.Main dfs recback257_3 false
+solved in 0.3788634 seconds
+checked 10567 pixels
+Number of vertices: 32769 Number of edges: 32768
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim33/gc.log MazeProgram.Main bfs prim33_1 false
+solved in 0.008883 seconds
+checked 598 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim33/gc.log MazeProgram.Main bfs prim33_2 false
+solved in 0.0077221 seconds
+checked 519 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim33/gc.log MazeProgram.Main bfs prim33_3 false
+solved in 0.0023335 seconds
+checked 214 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim65/gc.log MazeProgram.Main bfs prim65_1 false
+solved in 0.0164631 seconds
+checked 1812 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim65/gc.log MazeProgram.Main bfs prim65_2 false
+solved in 0.0188356 seconds
+checked 2409 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim65/gc.log MazeProgram.Main bfs prim65_3 false
+solved in 0.0193387 seconds
+checked 2409 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim129/gc.log MazeProgram.Main bfs prim129_1 false
+solved in 0.0555333 seconds
+checked 5876 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim129/gc.log MazeProgram.Main bfs prim129_2 false
+solved in 0.0976242 seconds
+checked 9194 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim129/gc.log MazeProgram.Main bfs prim129_3 false
+solved in 0.1064621 seconds
+checked 9637 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim193/gc.log MazeProgram.Main bfs prim193_1 false
+solved in 0.3103798 seconds
+checked 17754 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim193/gc.log MazeProgram.Main bfs prim193_2 false
+solved in 0.0949185 seconds
+checked 8444 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim193/gc.log MazeProgram.Main bfs prim193_3 false
+solved in 0.43302062 seconds
+checked 21316 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim257/gc.log MazeProgram.Main bfs prim257_1 false
+solved in 0.9719229 seconds
+checked 33244 pixels
+Number of vertices: 32769 Number of edges: 32768
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim257/gc.log MazeProgram.Main bfs prim257_2 false
+solved in 1.1987302 seconds
+checked 37196 pixels
+Number of vertices: 32769 Number of edges: 32768
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/prim257/gc.log MazeProgram.Main bfs prim257_3 false
+solved in 0.5296574 seconds
+checked 23643 pixels
+Number of vertices: 32769 Number of edges: 32768
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback33/gc.log MazeProgram.Main bfs recback33_1 false
+solved in 0.0037214 seconds
+checked 392 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback33/gc.log MazeProgram.Main bfs recback33_2 false
+solved in 0.0043668 seconds
+checked 419 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback33/gc.log MazeProgram.Main bfs recback33_3 false
+solved in 0.0036123 seconds
+checked 361 pixels
+Number of vertices: 513 Number of edges: 512
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback65/gc.log MazeProgram.Main bfs recback65_1 false
+solved in 0.0148049 seconds
+checked 1421 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback65/gc.log MazeProgram.Main bfs recback65_2 false
+solved in 0.0164662 seconds
+checked 1867 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback65/gc.log MazeProgram.Main bfs recback65_3 false
+solved in 0.0165867 seconds
+checked 1758 pixels
+Number of vertices: 2049 Number of edges: 2048
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback129/gc.log MazeProgram.Main bfs recback129_1 false
+solved in 0.077269696 seconds
+checked 7579 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback129/gc.log MazeProgram.Main bfs recback129_2 false
+solved in 0.0302371 seconds
+checked 3623 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback129/gc.log MazeProgram.Main bfs recback129_3 false
+solved in 0.0816506 seconds
+checked 7829 pixels
+Number of vertices: 8193 Number of edges: 8192
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback193/gc.log MazeProgram.Main bfs recback193_1 false
+solved in 0.081051 seconds
+checked 7552 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback193/gc.log MazeProgram.Main bfs recback193_2 false
+solved in 0.2830897 seconds
+checked 15791 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback193/gc.log MazeProgram.Main bfs recback193_3 false
+solved in 0.0418675 seconds
+checked 4915 pixels
+Number of vertices: 18433 Number of edges: 18432
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback257/gc.log MazeProgram.Main bfs recback257_1 false
+solved in 0.08085 seconds
+checked 6925 pixels
+Number of vertices: 32769 Number of edges: 32768
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback257/gc.log MazeProgram.Main bfs recback257_2 false
+solved in 0.8144521 seconds
+checked 28644 pixels
+Number of vertices: 32769 Number of edges: 32768
+
+C:\Users\Fiklk\Documents\GitHub\MazeProgram>java -Xms1m -Xlog:gc*:file=bfs/recback257/gc.log MazeProgram.Main bfs recback257_3 false
+solved in 0.5038212 seconds
+checked 22450 pixels
+Number of vertices: 32769 Number of edges: 32768
